@@ -43,6 +43,6 @@ for par in pargs:
         pargs.remove(par)
 
 #Printing
-for key, value in fin.items():
-    print("{}: {}".format(key, value))
-    print(f'\n')
+# for key, value in fin.items():
+#     print("{}: {}".format(key, value))
+#     print(f'\n')
