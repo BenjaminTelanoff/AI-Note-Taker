@@ -42,7 +42,7 @@ for par in pargs:
     elif len(par)<1:
         pargs.remove(par)
 
-#Printing
+# #Printing
 # for key, value in fin.items():
 #     print("{}: {}".format(key, value))
 #     print(f'\n')
