@@ -67,5 +67,8 @@ for text in needSum.values():
         titlewords = 0.1 * titlewords / len(title)
         scores[sentence] = score + titlewords
 
-    print(scores.values())
-    print("")
+    scores_list=list(scores.values())
+    print(f'\n\n\n🟩 SCORES: \n{scores_list}')
+
+    print(f'🟨 DETAILED;')
+    print(scores)
