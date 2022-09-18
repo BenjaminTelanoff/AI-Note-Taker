@@ -17,7 +17,7 @@ with open('sec1.html', 'r') as html_file:
         pargs.append(par.text)
 #Finding Suitable Instance
     for par in pargs:
-        if len(par)>=340:
+        if len(par)>=100:
 #Removing Page Count
             par=str(par)
             if 'page' in par:
