@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import re
 
 # Opening the HTML File. 
-with open('sec1.html', 'r') as html_file:
+with open('sec.html', 'r') as html_file:
     content = html_file.read()
     
 #List, Dictionary, and Counters - Empty
