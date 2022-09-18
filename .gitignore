@@ -1,3 +1,4 @@
 .DS_Store
 Scraper/main.py
 Wanted-Sections/sec1.html
+__pycache__/scrape.cpython-39.pyc
