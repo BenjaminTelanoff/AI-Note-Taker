@@ -13,22 +13,37 @@ tokenizer = RegexpTokenizer(r'\w+')
 stemmer = SnowballStemmer('english')
 raw=scrape.fin
 
+
 #Counters, Lists, and Dictionaries
 needSum={}
 titles=[]
 i=0
 titleCount=1
+sting=''
 
 #Organize all sections that need summary
 for value in raw:
+    
     if value.startswith('SECTION')==True:
         titles.append(raw[value])
-    if value.startswith('SUBSECTION')==True:  
+    elif value.startswith('SUBSECTION')==True:
+        if i>0:
+            needSum[i]=sting
         titles.append(raw[value])
         i+=1
-    if i>=1 and value.startswith('PARAGRAPH')==True:
-        needSum[i]=raw[value]
-
+        sting=""
+    if value.startswith('PARAGRAPH')==True:
+        #Weird Formating Things
+        sting=sting+' '+raw[value]
+        #   ATTENTION - THIS MAY BE BREAKPOINT. THIS IS AN UNTESTED SYNTAX FIXER. HASH OUT IF NECCESARY.
+        sting=sting.replace('."', '. "').replace('?"', '? "').replace('!"', '! "')
+needSum[i]=sting
+        
+        
+# #     TESTING    #
+# # print(f'👑 Titles: {titles}')
+# for num, parg in needSum.items():
+#     print(f'\n ✅ {num, parg}\n')
 
 for text in needSum.values():
     # tokenize and form nltk objects
