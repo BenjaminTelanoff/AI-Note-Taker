@@ -16,6 +16,7 @@ raw=scrape.fin
 
 #Counters, Lists, and Dictionaries
 needSum={}
+fin={}
 titles=[]
 i=0
 titleCount=1
@@ -45,6 +46,7 @@ needSum[i]=sting
 # for num, parg in needSum.items():
 #     print(f'\n ✅ {num, parg}\n')
 
+i=0
 for text in needSum.values():
     # tokenize and form nltk objects
     tk = nltk.Text(tokenizer.tokenize(text))
@@ -81,9 +83,18 @@ for text in needSum.values():
         #number of words in sentence / number of those words present in title
         titlewords = 0.1 * titlewords / len(title)
         scores[sentence] = score + titlewords
+        #print(scores)
+    i+=1
+    fin[i]=scores
+    
+    
+# #     ------------     TESTING  --------------    #
+#     scores_list=list(scores.values())
+#     print(f'\n\n\n🟩 SCORES: \n{scores_list}')
 
-    scores_list=list(scores.values())
-    print(f'\n\n\n🟩 SCORES: \n{scores_list}')
+#     print(f'🟨 DETAILED;')
+#     print(scores)
 
-    print(f'🟨 DETAILED;')
-    print(scores)
+
+# for key,value in fin.items():
+#     print(f'\n 🟪 {key};       {value}\n')
