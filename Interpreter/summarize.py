@@ -39,9 +39,6 @@ for value in raw:
         #   ATTENTION - THIS MAY BE BREAKPOINT. THIS IS AN UNTESTED SYNTAX FIXER. HASH OUT IF NECCESARY.
         sting=sting.replace('“', '"').replace('”', '"')
         sting=sting.replace('."', '. "').replace('?"', '? "').replace('!"', '! "')
-
-        if 'licentiousness' in sting:
-            print(sting)
 needSum[i]=sting
         
 # #     TESTING    #

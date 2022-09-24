@@ -35,7 +35,7 @@ for lib in raw.values():
     top=[sort[-1]]                   #highest & second highest scoring sentence
     a=(list(lib.keys()) [list(lib.values()).index(sort[-1])])
     b=(list(lib.keys()) [list(lib.values()).index(sort[-2])])
-    if sort[-2]>=10 and len(a)<100 and len(b)<100:
+    if sort[-2]>=10 and len(a)<150 and len(b)<100:
          top.append(sort[-2])
     facts=[]
     if len(sort)>=5:
@@ -78,10 +78,14 @@ for lib in raw.values():
 up=string.ascii_uppercase
 three=['i', 'ii', 'iii']
 with open('basic.txt', 'w') as f:
-    f.write(header + '\n\n\n')
+    f.write(header + '\n\n')
     for num in range (1, len(summary)+1):
         f.write(up[num-1]+'. '+sections[num-1] + '\n')
         f.writelines(summary[num])
         f.write('\n\n')
+        c=0
+        for fact in factList[num]:
+            f.write(three[c]+'. ')
+            c+=1
+            f.write(fact + '\n\n')
         
-
