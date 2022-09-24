@@ -1,5 +1,5 @@
 #Imports for summarizing it using nltk
-import scrape
+import Input.scrape as scrape
 import nltk
 from nltk.tokenize import RegexpTokenizer, sent_tokenize
 from nltk.corpus import stopwords
