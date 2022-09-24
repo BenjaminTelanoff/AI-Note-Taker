@@ -37,9 +37,12 @@ for value in raw:
         #Weird Formating Things
         sting=sting+' '+raw[value]
         #   ATTENTION - THIS MAY BE BREAKPOINT. THIS IS AN UNTESTED SYNTAX FIXER. HASH OUT IF NECCESARY.
+        sting=sting.replace('“', '"').replace('”', '"')
         sting=sting.replace('."', '. "').replace('?"', '? "').replace('!"', '! "')
+
+        if 'licentiousness' in sting:
+            print(sting)
 needSum[i]=sting
-        
         
 # #     TESTING    #
 # # print(f'👑 Titles: {titles}')
@@ -86,8 +89,6 @@ for text in needSum.values():
         #print(scores)
     i+=1
     fin[i]=scores
-    
-    
 # #     -------------     TESTING    --------------    #
 #     scores_list=list(scores.values())
 #     print(f'\n\n\n🟩 SCORES: \n{scores_list}')

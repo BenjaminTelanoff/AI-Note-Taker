@@ -1,6 +1,9 @@
 #Importing module
+import numbers
+import string
 import summarize
 raw=summarize.fin
+allo=summarize.raw
 
 #This is a tool that will come in handy later (Mickey Mouse Club House)
 def too_short(tofacts, lib, facts):
@@ -15,14 +18,24 @@ def too_short(tofacts, lib, facts):
     facts.append(sents[0])
     return facts
 
+#Taking out Subsection and Header
+sections=[]
+for value in allo:
+    if value.startswith('SECTION')==True:
+        header=(allo[value])
+    elif value.startswith('SUBSECTION')==True:
+        sections.append(allo[value])
 #Creating labeled containers for summary + three interesting facts
-total={}
+summary={}
+factList={}
 i=0
 #Sorting to according places
 for lib in raw.values():
     sort=sorted(lib.values())
     top=[sort[-1]]                   #highest & second highest scoring sentence
-    if sort[-2]>=10:
+    a=(list(lib.keys()) [list(lib.values()).index(sort[-1])])
+    b=(list(lib.keys()) [list(lib.values()).index(sort[-2])])
+    if sort[-2]>=10 and len(a)<100 and len(b)<100:
          top.append(sort[-2])
     facts=[]
     if len(sort)>=5:
@@ -46,11 +59,29 @@ for lib in raw.values():
         facts.append(sent[:l])
         facts.append(sent[l:2*l])
         facts.append(sent[2*l:])
+    tippy=[]
+    for num in top:
+        tippy.append(list(lib.keys()) [list(lib.values()).index(num)])
     
+    i+=1
+    summary[i]=tippy
+    factList[i]=facts
     
+
+# #TESTING
+# for num in range(1,len(summary)+1):
+#     print(summary[num])
+#     print(factList[num])
+#     print('\n\n\n')
+    
+#Writing the output in text file
+up=string.ascii_uppercase
+three=['i', 'ii', 'iii']
+with open('basic.txt', 'w') as f:
+    f.write(header + '\n\n\n')
+    for num in range (1, len(summary)+1):
+        f.write(up[num-1]+'. '+sections[num-1] + '\n')
+        f.writelines(summary[num])
+        f.write('\n\n')
         
 
-    
-#Writing the output text file
-with open('basic.txt', 'w') as f:
-    None
