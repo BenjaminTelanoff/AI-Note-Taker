@@ -1,6 +1,6 @@
 #Importing module
 import sys
-sys.path.append('/Users/Ben/Coding/Note Taker/AI-Note-Taker')
+sys.path.append('/Users/Ben/Coding/Note Taker/AI-Note-Taker') #<--- CHANGE TO YOUR CURRENT WORKING DIRECTORY (not neccesarily needed, I only add because I have in different folders)
 #Imports for summarizing it using nltk
 import scrape
 import nltk
@@ -91,13 +91,13 @@ for text in needSum.values():
     fin[i]=scores
     
     
-# #     ------------     TESTING  --------------    #
+# #     -------------     TESTING    --------------    #
 #     scores_list=list(scores.values())
 #     print(f'\n\n\n🟩 SCORES: \n{scores_list}')
 
 #     print(f'🟨 DETAILED;')
 #     print(scores)
 
-
+# #     -------------     TESTING 2    --------------    #
 # for key,value in fin.items():
 #     print(f'\n 🟪 {key};       {value}\n')
