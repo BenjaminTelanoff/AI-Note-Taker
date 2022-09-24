@@ -1,6 +1,8 @@
-
+#Importing module
+import sys
+sys.path.append('/Users/Ben/Coding/Note Taker/AI-Note-Taker')
 #Imports for summarizing it using nltk
-import Input.scrape as scrape
+import scrape
 import nltk
 from nltk.tokenize import RegexpTokenizer, sent_tokenize
 from nltk.corpus import stopwords
