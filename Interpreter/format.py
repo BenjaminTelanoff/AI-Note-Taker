@@ -73,14 +73,20 @@ for lib in raw.values():
 #     print(summary[num])
 #     print(factList[num])
 #     print('\n\n\n')
-    
-#Writing the output in text file
+
+
+#IMPORTANT: choose either text or markdown. Markdown comes with styling and bolding but cannot be opened by device default editor. TXT file will be used by machine later to write 
+    # in you own handwriting
+
+#Writng the output in markdown file with html styling
 up=string.ascii_uppercase
 three=['i', 'ii', 'iii']
-with open('basic.txt', 'w') as f:
-    f.write(header + '\n\n')
+with open('basic.md', 'w') as f:
+    f.write('# '+ '<span style="color:tomato">'+
+        '**'+header+'**'+'\n\n')
     for num in range (1, len(summary)+1):
-        f.write(up[num-1]+'. '+sections[num-1] + '\n\n')
+        f.write('### '+'<span style="color:DodgerBlue">'+
+            '**'+up[num-1]+'. '+sections[num-1]+'**' + '\n\n')
         f.writelines(summary[num])
         f.write('\n\n')
         c=0
@@ -88,4 +94,20 @@ with open('basic.txt', 'w') as f:
             f.write(three[c]+'. ')
             c+=1
             f.write(fact + '\n\n')
+
+
+# #Writing the output in text file
+# up=string.ascii_uppercase
+# three=['i', 'ii', 'iii']
+# with open('basic.txt', 'w') as f:
+#     f.write(header + '\n\n')
+#     for num in range (1, len(summary)+1):
+#         f.write(up[num-1]+'. '+sections[num-1] + '\n\n')
+#         f.writelines(summary[num])
+#         f.write('\n\n')
+#         c=0
+#         for fact in factList[num]:
+#             f.write(three[c]+'. ')
+#             c+=1
+#             f.write(fact + '\n\n')
         
