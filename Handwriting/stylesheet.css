@@ -1,4 +1,3 @@
-
 @font-face {
     font-family: 'customoneregular';
     src: url('customone-regular-webfont.woff2') format('woff2'),
@@ -6,4 +5,71 @@
     font-weight: normal;
     font-style: normal;
 
+}
+body
+.sheet{
+    background-color: white;
+    background: repeating-linear-gradient(white, white 25px, #9198e5 26px, #9198e5 26px);
+    background-position-y: 45px;
+    height: 900px;
+    width: 650px;
+    padding: 0;
+    margin-top: 50px;
+    margin-left: 15px;
+}
+.sheet header {
+ background-color: white;
+ height: 76px;
+ 
+
+ 
+}
+.sheet-title {
+ position: relative;
+ top: 20px;
+ font-size: 30px;
+ font-weight: bold;
+ padding-left: 10px;
+}
+.sheet-text {
+ position: relative;
+ top: 33px;
+ font-size: 22px;
+ width: 480px;
+ margin: 0 55px;
+ line-height: 27px;
+}
+.margin {
+ width: 80px;
+ height: 100%;
+}
+.l-margin {
+ float: left;
+ border-right: 2px solid pink;
+}
+.r-margin {
+ float: right;
+ border-left: 1px solid pink;
+}
+
+/* Styling for hole punches */
+.l-margin {
+ position: relative;
+}
+.hole {
+ height: 21px;
+ width: 21px;
+ background-color: #555;
+ border-radius: 50%;
+ position: absolute;
+ left: 42px;
+}
+.first-hole {
+ top: 70px;
+}
+.second-hole {
+ top: 50%;
+}
+.third-hole {
+ bottom: 30px;
 }
