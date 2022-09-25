@@ -80,7 +80,7 @@ three=['i', 'ii', 'iii']
 with open('basic.txt', 'w') as f:
     f.write(header + '\n\n')
     for num in range (1, len(summary)+1):
-        f.write(up[num-1]+'. '+sections[num-1] + '\n')
+        f.write(up[num-1]+'. '+sections[num-1] + '\n\n')
         f.writelines(summary[num])
         f.write('\n\n')
         c=0
