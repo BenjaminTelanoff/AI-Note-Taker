@@ -35,8 +35,8 @@ for lib in raw.values():
     top=[sort[-1]]                   #highest & second highest scoring sentence
     a=(list(lib.keys()) [list(lib.values()).index(sort[-1])])
     b=(list(lib.keys()) [list(lib.values()).index(sort[-2])])
-    if sort[-2]>=10 and len(a)<150 and len(b)<100:
-         top.append(sort[-2])
+    if len(a)<150 and len(b)<150:
+        top.append(sort[-2])
     facts=[]
     if len(sort)>=5:
         tofacts=[sort[-3], sort[-4], sort[-5]]
@@ -62,11 +62,10 @@ for lib in raw.values():
     tippy=[]
     for num in top:
         tippy.append(list(lib.keys()) [list(lib.values()).index(num)])
-    
     i+=1
     summary[i]=tippy
     factList[i]=facts
-    
+
 
 # #TESTING
 # for num in range(1,len(summary)+1):
@@ -87,7 +86,8 @@ with open('basic.md', 'w') as f:
     for num in range (1, len(summary)+1):
         f.write('### '+'<span style="color:DodgerBlue">'+
             '**'+up[num-1]+'. '+sections[num-1]+'**' + '\n\n')
-        f.writelines(summary[num])
+        for s in summary[num]:
+            f.writelines(s + ' ')
         f.write('\n\n')
         c=0
         for fact in factList[num]:
