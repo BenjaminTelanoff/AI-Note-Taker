@@ -4,14 +4,24 @@
          url('customone-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'customtworegular';
+    src: url('customtwo-regular-webfont.woff2') format('woff2'),
+         url('customtwo-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 
 }
+
 body
 .sheet{
     background-color: white;
-    background: repeating-linear-gradient(white, white 25px, #9198e5 26px, #9198e5 26px);
+
+    background-image: repeating-linear-gradient(white, white 25px, #9198e5 27px);
     background-position-y: 48px;
-    height: 935;
+    height: 930;
     width: 722.5;
 }
 .sheet header {
@@ -34,8 +44,8 @@ body
 }
 .sheet-text {
  position: relative;
- top: px;
- line-height: 25.9px;
+ top: 0px;
+ line-height: 27px;
  color:rgba(61, 65, 69, 0.882)
 }
 .margin {
@@ -77,4 +87,10 @@ body
 }
 .third-hole {
  bottom: 30px;
+}
+
+@media print{
+    .sheet-text{
+        top: -9px;
+    }
 }
