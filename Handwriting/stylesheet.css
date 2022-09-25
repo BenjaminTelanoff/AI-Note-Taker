@@ -10,37 +10,36 @@ body
 .sheet{
     background-color: white;
     background: repeating-linear-gradient(white, white 25px, #9198e5 26px, #9198e5 26px);
-    background-position-y: 45px;
-    height: 900px;
-    width: 650px;
-    padding: 0;
-    margin-top: 50px;
-    margin-left: 15px;
+    background-position-y: 48px;
+    height: 935;
+    width: 722.5;
 }
 .sheet header {
  background-color: white;
  height: 76px;
- 
-
- 
+}
+.sheet-head{
+ position: relative;
+ top: 88px;
+ padding-left: 10px;
+ line-height: 0.72;
+ color:rgba(219, 42, 19, 0.882)
 }
 .sheet-title {
  position: relative;
- top: 20px;
- font-size: 30px;
- font-weight: bold;
+ top: 75px;
  padding-left: 10px;
+ line-height: 0.72;
+ color:rgba(27, 118, 197, 0.882)
 }
 .sheet-text {
  position: relative;
- top: 33px;
- font-size: 22px;
- width: 480px;
- margin: 0 55px;
- line-height: 27px;
+ top: px;
+ line-height: 25.9px;
+ color:rgba(61, 65, 69, 0.882)
 }
 .margin {
- width: 80px;
+ width: 116px;
  height: 100%;
 }
 .l-margin {
@@ -49,20 +48,26 @@ body
 }
 .r-margin {
  float: right;
+}
+.newmargin{
+    width: 63.75px;
+    height: 100%;
+}
+.r-newmargin{
+ float: right;
  border-left: 1px solid pink;
 }
-
 /* Styling for hole punches */
 .l-margin {
  position: relative;
 }
 .hole {
- height: 21px;
- width: 21px;
- background-color: #555;
+ height: 18px;
+ width: 18px;
+ background-color: rgba(62, 70, 68, 0.882);
  border-radius: 50%;
  position: absolute;
- left: 42px;
+ left: 85px;
 }
 .first-hole {
  top: 70px;
