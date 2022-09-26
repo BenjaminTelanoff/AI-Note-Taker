@@ -80,10 +80,11 @@ for lib in raw.values():
 
 
 #Writing output in the html file
-
+import os
+os.chdir('/Users/Ben/Coding/Note Taker/AI-Note-Taker/Handwriting')
 with open('notebook.html', 'a') as f:
-    f.write('<header> \n\n <span class="sheet-head" \n\n > <p class="size48">')
-
+    f.write('<header> \n <span class="sheet-head"> \n  <p class="size48">')
+    f.write(f'\n{header}\n  </p> \n </span>  ')
 # #Writng the output in markdown file with html styling
 # up=string.ascii_uppercase
 # three=['i', 'ii', 'iii']

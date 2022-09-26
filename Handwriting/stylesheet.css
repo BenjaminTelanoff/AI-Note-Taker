@@ -18,7 +18,6 @@
 body
 .sheet{
     background-color: white;
-
     background-image: repeating-linear-gradient(white, white 25px, #9198e5 27px);
     background-position-y: 48px;
     height: 930;
@@ -26,7 +25,7 @@ body
 }
 .sheet header {
  background-color: white;
- height: 76px;
+ height: 50px;
 }
 .sheet-head{
  position: relative;
@@ -46,7 +45,7 @@ body
  position: relative;
  top: 0px;
  line-height: 27px;
- color:rgba(61, 65, 69, 0.882)
+ color:rgb(61, 83, 97)
 }
 .margin {
  width: 116px;
@@ -74,7 +73,7 @@ body
 .hole {
  height: 18px;
  width: 18px;
- background-color: rgba(62, 70, 68, 0.882);
+ background: radial-gradient(circle at 100%, rgba(42, 40, 40, 0.389), rgb(70, 59, 59) 50%, rgb(218, 214, 214) 75%, rgb(219, 215, 215) 75%);;
  border-radius: 50%;
  position: absolute;
  left: 85px;
