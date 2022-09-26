@@ -82,9 +82,41 @@ for lib in raw.values():
 #Writing output in the html file
 import os
 os.chdir('/Users/Ben/Coding/Note Taker/AI-Note-Taker/Handwriting')
+up=string.ascii_uppercase
+three=['i', 'ii', 'iii']
+
 with open('notebook.html', 'a') as f:
     f.write('<header> \n <span class="sheet-head"> \n  <p class="size48">')
-    f.write(f'\n{header}\n  </p> \n </span>  ')
+    f.write(f'\n{header}\n  </p> \n </span> \n </header>')
+    f.write(f'\n<span class="sheet-text">\n<p class="size30"> \n')
+    for num in range(1, len(summary)+1):
+        f.write(up[num-1]+'. '+sections[num-1] + '\n\n')
+        f.writelines(summary[num])
+        f.write('\n\n')
+        c=0
+        for fact in factList[num]:
+            f.write(three[c]+'. ')
+            c+=1
+            f.write(fact + '\n\n')   
+
+
+# #Writing the output in text file
+# up=string.ascii_uppercase
+# three=['i', 'ii', 'iii']
+# with open('basic.txt', 'w') as f:
+#     f.write(header + '\n\n')
+#     for num in range (1, len(summary)+1):
+#         f.write(up[num-1]+'. '+sections[num-1] + '\n\n')
+#         f.writelines(summary[num])
+#         f.write('\n\n')
+#         c=0
+#         for fact in factList[num]:
+#             f.write(three[c]+'. ')
+#             c+=1
+#             f.write(fact + '\n\n')   
+
+
+
 # #Writng the output in markdown file with html styling
 # up=string.ascii_uppercase
 # three=['i', 'ii', 'iii']
@@ -104,18 +136,5 @@ with open('notebook.html', 'a') as f:
 #             f.write(fact + '\n\n')
 
 
-# #Writing the output in text file
-# up=string.ascii_uppercase
-# three=['i', 'ii', 'iii']
-# with open('basic.txt', 'w') as f:
-#     f.write(header + '\n\n')
-#     for num in range (1, len(summary)+1):
-#         f.write(up[num-1]+'. '+sections[num-1] + '\n\n')
-#         f.writelines(summary[num])
-#         f.write('\n\n')
-#         c=0
-#         for fact in factList[num]:
-#             f.write(three[c]+'. ')
-#             c+=1
-#             f.write(fact + '\n\n')
+
         
