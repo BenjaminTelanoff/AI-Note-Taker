@@ -1,6 +1,11 @@
 #Importing module
 import numbers
 import string
+import sys
+#INSERT PATH TO PROJECT FILE
+sys.path.insert(1, '/Users/Ben/Coding/Note Taker/AI-Note-Taker/Interpreter')
+
+#ignore "missing module" warning, sys is working.
 import summarize
 raw=summarize.fin
 allo=summarize.raw
@@ -74,26 +79,28 @@ for lib in raw.values():
 #     print('\n\n\n')
 
 
-#IMPORTANT: choose either text or markdown. Markdown comes with styling and bolding but cannot be opened by device default editor. TXT file will be used by machine later to write 
-    # in you own handwriting
+#Writing output in the html file
 
-#Writng the output in markdown file with html styling
-up=string.ascii_uppercase
-three=['i', 'ii', 'iii']
-with open('basic.md', 'w') as f:
-    f.write('# '+ '<span style="color:tomato">'+
-        '**'+header+'**'+'\n\n')
-    for num in range (1, len(summary)+1):
-        f.write('### '+'<span style="color:DodgerBlue">'+
-            '**'+up[num-1]+'. '+sections[num-1]+'**' + '\n\n')
-        for s in summary[num]:
-            f.writelines(s + ' ')
-        f.write('\n\n')
-        c=0
-        for fact in factList[num]:
-            f.write(three[c]+'. ')
-            c+=1
-            f.write(fact + '\n\n')
+with open('notebook.html', 'a') as f:
+    f.write('<header> \n\n <span class="sheet-head" \n\n > <p class="size48">')
+
+# #Writng the output in markdown file with html styling
+# up=string.ascii_uppercase
+# three=['i', 'ii', 'iii']
+# with open('basic.md', 'w') as f:
+#     f.write('# '+ '<span style="color:tomato">'+
+#         '**'+header+'**'+'\n\n')
+#     for num in range (1, len(summary)+1):
+#         f.write('### '+'<span style="color:DodgerBlue">'+
+#             '**'+up[num-1]+'. '+sections[num-1]+'**' + '\n\n')
+#         for s in summary[num]:
+#             f.writelines(s + ' ')
+#         f.write('\n\n')
+#         c=0
+#         for fact in factList[num]:
+#             f.write(three[c]+'. ')
+#             c+=1
+#             f.write(fact + '\n\n')
 
 
 # #Writing the output in text file
