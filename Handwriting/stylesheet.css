@@ -1,9 +1,96 @@
-
 @font-face {
     font-family: 'customoneregular';
     src: url('customone-regular-webfont.woff2') format('woff2'),
          url('customone-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
 
+@font-face {
+    font-family: 'customtworegular';
+    src: url('customtwo-regular-webfont.woff2') format('woff2'),
+         url('customtwo-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body
+.sheet{
+    background-color: white;
+
+    background-image: repeating-linear-gradient(white, white 25px, #9198e5 27px);
+    background-position-y: 48px;
+    height: 930;
+    width: 722.5;
+}
+.sheet header {
+ background-color: white;
+ height: 76px;
+}
+.sheet-head{
+ position: relative;
+ top: 88px;
+ padding-left: 10px;
+ line-height: 0.72;
+ color:rgba(219, 42, 19, 0.882)
+}
+.sheet-title {
+ position: relative;
+ top: 75px;
+ padding-left: 10px;
+ line-height: 0.72;
+ color:rgba(27, 118, 197, 0.882)
+}
+.sheet-text {
+ position: relative;
+ top: 0px;
+ line-height: 27px;
+ color:rgba(61, 65, 69, 0.882)
+}
+.margin {
+ width: 116px;
+ height: 100%;
+}
+.l-margin {
+ float: left;
+ border-right: 2px solid pink;
+}
+.r-margin {
+ float: right;
+}
+.newmargin{
+    width: 63.75px;
+    height: 100%;
+}
+.r-newmargin{
+ float: right;
+ border-left: 1px solid pink;
+}
+/* Styling for hole punches */
+.l-margin {
+ position: relative;
+}
+.hole {
+ height: 18px;
+ width: 18px;
+ background-color: rgba(62, 70, 68, 0.882);
+ border-radius: 50%;
+ position: absolute;
+ left: 85px;
+}
+.first-hole {
+ top: 70px;
+}
+.second-hole {
+ top: 50%;
+}
+.third-hole {
+ bottom: 30px;
+}
+
+@media print{
+    .sheet-text{
+        top: -9px;
+    }
 }

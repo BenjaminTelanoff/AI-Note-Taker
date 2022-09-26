@@ -1,6 +1,11 @@
 from curses.ascii import isupper
 from bs4 import BeautifulSoup
 import re
+import os
+
+#CHANGE TO YOUR LOCATION OF "USER"
+os.chdir('/Users/Ben/Coding/Note Taker/AI-Note-Taker/User')
+#IMPORTANT ^
 
 # Opening the HTML File. 
 with open('sec.html', 'r') as html_file:
